@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.overlay {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 45px;
+  right: 0;
+  height: 55%;
+  width: 27%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.text1 {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+</style>
+</head>
+<body>
+
+<h3>RM-PHONEBOOK</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="https://cdn2.iconfinder.com/data/icons/mini-2/512/11_people-512.png" style="width:60%">
+      <div class="overlay">
+        <div class = "text1">Welcome</div>
+      </div>
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="date of birth">Date of Birth</label>
+        <input type="text" id="date of birth" name="date of birth" placeholder="dd/mm/yyyy">
+
+        <label for="email id">Email</label>
+        <input type="text" id="email id" name="emailid" placeholder="abc@gmail.com">
+
+        <label for="Contact No">Contact</label>
+        <input type="text" id="Contact No" name="contactno" placeholder="10 digit number">
+
+        <input type="submit" value="Save">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
